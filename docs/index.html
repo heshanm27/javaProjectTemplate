@@ -110,13 +110,11 @@ background: chocolate;
 
     height: 500px !important;
 }
-          
 @media only screen and (max-width: 600px) {
     .carousel-inner{
     height: unset !important;
   }
 }
-
 .py-5 {
     padding-top: 3rem!important;
     padding-bottom: 3rem!important;
@@ -148,6 +146,11 @@ background: chocolate;
     color: #0d6efd;
 }
 
+
+.nav-tabs li.active  a{
+  display: block;
+  background-color: tomato !important;
+}
       </style>
 </head>
 <body>
@@ -528,38 +531,105 @@ background: chocolate;
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+                    <div class="modal-header justify-content-center">
+
+                        <div class="container my-5">
+
+                            <nav>
+                                <div class="nav nav-pills nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active " id="navSignup" data-bs-toggle="pill" data-bs-target="#signUp" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Sign Up</button>
+                                    <button class="nav-link " id="navLogin" data-bs-toggle="pill" data-bs-target="#Login" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Log In</button>
+                                
+
+                                
+
+                                </div>
+
+
+
+                            </nav>
+                        </div>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+
+
                     <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <div class="tab-content" id="nav-tabontent">
+                                <div class="tab-pane fade show active p-3" id="signUp" role="tabpanel" aria-labelledby="navSignup">
+
+                                    <div class="container-fluid text-center h1">
+
+                                        <h1 class="text-primary">Create Account</h1>
+
+                                    </div>
+
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                      </form>
+                                </div>
+
+
+
+
+
+                                <div class="tab-pane fade  " id="Login" role="tabpanel" aria-labelledby="navLogin">
+                                    <div class="container-fluid text-center h1">
+
+                                        <h1 class="text-primary">Login</h1>
+
+                                    </div>
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                      </form>
+                                </div>
+
+
+
                             </div>
-                            <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-3 form-check">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </form>
+
+
+       
+
+
+
+
+
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer justify-content-end">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button"  class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#ModelLogin"  >Login</button>
                     </div>
                   </div>
                 </div>
               </div>
 
 
-
+           
 
               <div class="modal fade" id="ModelLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -703,7 +773,6 @@ background: chocolate;
         items: 2
         },
         400: {
- 
         items: 2
       },
       640: {
